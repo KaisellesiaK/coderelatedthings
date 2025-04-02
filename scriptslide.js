@@ -9,13 +9,11 @@ function showSlide(index) {
     if (index < 0) slideIndex = slides.length - 1; // Loop back to the last slide
 
     slides.forEach((slide) => {
-        slide.style.display = "none"; // Hide all slides
         slide.classList.remove("active"); // Remove active class for fade effect
     });
 
     dots.forEach((dot) => dot.classList.remove("active")); // Remove active class from all dots
 
-    slides[slideIndex].style.display = "flex"; // Show the current slide
     slides[slideIndex].classList.add("active"); // Add active class for fade effect
     dots[slideIndex].classList.add("active"); // Highlight the active dot
 }
